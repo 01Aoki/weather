@@ -1,6 +1,5 @@
 'use client';
 import { useState } from 'react';
-import styles from '@/app/weather/style.css';
 import useSWR from 'swr';
 import Tokyo from '@/app/weather/tokyo/page';
 import Saitama from '@/app/weather/saitama/page';
@@ -20,8 +19,7 @@ export default function Page() {
   console.log(data);
   
   return (
-      // <h1 className='text-48 font-bold'>お天気予報</h1>
-    <div className={styles.container}>
+    <div>
       <Tokyo />
       <Saitama />
       <Tochigi />
