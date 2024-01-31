@@ -19,7 +19,11 @@ export default function Page() {
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
         className="btn"
-        onClick={() => document.getElementById('my_modal_4')!.showModal()}
+        onClick={() => {
+            if (document) {
+              (document.getElementById('my_modal_4') as HTMLFormElement).showModal();
+            }
+          }}
       >
         予報を見る
       </button>

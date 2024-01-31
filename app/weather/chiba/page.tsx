@@ -18,11 +18,15 @@ export default function Page() {
       {/* Open the modal using document.getElementById('ID').showModal() method */}
       <button
         className="btn"
-        onClick={() => document.getElementById('my_modal_5')!.showModal()}
+        onClick={() => {
+            if (document) {
+              (document.getElementById('my_modal_8') as HTMLFormElement).showModal();
+            }
+          }}
       >
         予報を見る
       </button>
-      <dialog id="my_modal_5" className="modal">
+      <dialog id="my_modal_8" className="modal">
         <div className="modal-box">
           <h3 className="font-bold text-lg">
             {data[0].timeSeries[0].areas[0].area.name}
